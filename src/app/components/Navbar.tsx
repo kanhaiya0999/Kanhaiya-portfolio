@@ -10,9 +10,21 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-
+import { useGSAP } from "@gsap/react";
+import { useRef } from "react";
+import gsap from "gsap";
 const Navbar = () => {
   const router = useRouter();
+  const navref = useRef() as React.MutableRefObject<HTMLDivElement>;
+  useGSAP(() => {
+    gsap.from(navref.current, {
+      delay: 0.4,
+      duration: 1,
+      y: 20,
+      ease: "power1",
+      opacity: 0,
+    });
+  });
 
   const isMobile = useMediaQuery({ query: "(max-width: 767px)" });
 
@@ -20,7 +32,7 @@ const Navbar = () => {
     return <>Loading</>;
   }
   return (
-    <div className="bg-[#000000] text-white md:rounded-b-full">
+    <div className="bg-[#000000] text-white md:rounded-b-full" ref={navref}>
       <div className="md:max-w-[50%] md:mx-auto md:flex md:justify-between md:p-4 md:text-center md:items-center flex p-5 justify-between text-center items-center">
         <div>
           <Image
