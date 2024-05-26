@@ -15,6 +15,7 @@ const Navbar = () => {
 
   const mobilemenetimeline = gsap.timeline({ paused: true });
   useGSAP(() => {
+    mobilemenetimeline.progress(0);
     gsap.from(navref.current, {
       delay: 0.4,
       duration: 1,

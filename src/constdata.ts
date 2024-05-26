@@ -11,7 +11,7 @@ export const Navbar_links = [
 ];
 export const Footer_links = [
   { name: "Home", link: "/" },
-  { name: "Components", link: "/components" },
+  { name: "Components", link: "/components-page" },
   { name: "About", link: "/about" },
   { name: "Contact", link: "/contact-us" },
 
