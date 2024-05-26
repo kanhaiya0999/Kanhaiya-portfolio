@@ -1,5 +1,7 @@
 export const Instragram_link = "https://www.instagram.com/bohra_.dev/";
 export const Domain = "https://www.bohra.dev";
+export const Github_link =
+  "https://github.com/kanhaiya0999/Kanhaiya-portfolio/blob/main/src/app";
 export const Sitemap = `${Domain}/sitemap.xml`;
 export const Navbar_links = [
   { name: "Home", link: "/" },
