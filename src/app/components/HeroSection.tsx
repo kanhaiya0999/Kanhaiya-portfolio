@@ -1,4 +1,5 @@
 "use client";
+import { Instragram_link } from "@/constdata";
 import Image from "next/image";
 import Link from "next/link";
 const HeroSection = () => {
@@ -16,9 +17,9 @@ const HeroSection = () => {
           </p>
         </div>
 
-        <Link href={"https://wa.me/919024535148"} className="m-4">
+        <Link href={Instragram_link} className="m-4">
           <div className="bg-black h-fit w-fit mx-auto text-center text-white p-5 rounded-lg ">
-            <span className="relative hover:text-[#FFDD55]">Contact Me</span>
+            <span className="relative hover:text-primary">Contact Me</span>
           </div>
         </Link>
       </div>

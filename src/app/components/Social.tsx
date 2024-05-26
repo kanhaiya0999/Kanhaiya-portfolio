@@ -1,9 +1,10 @@
 "use client";
-import Image from "next/image";
 import Link from "next/link";
 import { useRef } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
+import { Instragram_link } from "@/constdata";
+import { Instagram } from "lucide-react";
 const Social = () => {
   const iconref = useRef() as React.MutableRefObject<HTMLDivElement>;
   useGSAP(() => {
@@ -17,16 +18,8 @@ const Social = () => {
   });
   return (
     <div className="space-x-4 " ref={iconref}>
-      <Link href={"/"}>
-        <Image src={"/social1.svg"} alt="" width={55} height={55} />
-      </Link>
-
-      <Link href={"/"}>
-        <Image src={"/social2.svg"} alt="" width={55} height={55} />
-      </Link>
-
-      <Link href={"/"}>
-        <Image src={"/social3.svg"} alt="" width={55} height={55} />
+      <Link href={Instragram_link}>
+        <Instagram size={35} />
       </Link>
     </div>
   );
