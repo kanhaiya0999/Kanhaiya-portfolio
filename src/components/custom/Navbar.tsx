@@ -35,7 +35,7 @@ const Navbar = () => {
       stagger: 0.2,
       opacity: 0,
     });
-  });
+  }, []);
 
   return (
     <nav>
