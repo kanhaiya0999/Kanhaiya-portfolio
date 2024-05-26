@@ -37,7 +37,7 @@ const Navbar = () => {
   });
 
   return (
-    <>
+    <nav>
       <div
         className="bg-black text-white md:rounded-b-full overflow-hidden"
         ref={navref}
@@ -103,7 +103,7 @@ const Navbar = () => {
           </Link>
         ))}
       </div>
-    </>
+    </nav>
   );
 };
 
