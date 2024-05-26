@@ -81,7 +81,7 @@ const Navbar = () => {
       </div>
       <div
         ref={mobileNavRef}
-        className={`md:hidden mobilenavbar bg-primary fixed left-[0%] w-full h-full flex flex-col p-10 `}
+        className=" md:hidden mobilenavbar backdrop-blur-md  fixed left-[0%] w-full h-full flex flex-col p-10 z-10"
       >
         <X
           className="absolute top-6 right-5"
@@ -95,6 +95,9 @@ const Navbar = () => {
             href={link.link}
             className="py-8 text-center hover:text-primary mobilenavmenu text-white 
             text-4xl flex flex-col"
+            onClick={() => {
+              mobilemenetimeline.reverse();
+            }}
           >
             {link.name}
           </Link>

@@ -12,14 +12,14 @@ const HeroSection = () => {
           I&apos;m kanhaiya
         </p>
         <div className="md:flex">
-          <p className="opacity-80 font-semibold mt-4 text-start">
+          <p className=" font-semibold mt-4 text-start">
             NodeJs, NextJs developer
           </p>
         </div>
 
         <Link href={Instragram_link} className="m-4">
           <div className="bg-black h-fit w-fit mx-auto text-center text-white p-5 rounded-lg ">
-            <span className="relative hover:text-primary">Contact Me</span>
+            <span className="hover:text-primary">Contact Me</span>
           </div>
         </Link>
       </div>
