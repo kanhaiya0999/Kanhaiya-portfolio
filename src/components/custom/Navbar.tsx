@@ -12,7 +12,6 @@ const Navbar = () => {
   const router = useRouter();
   const navref = useRef() as React.MutableRefObject<HTMLDivElement>;
   const mobileNavRef = useRef(null);
-
   const mobilemenetimeline = gsap.timeline({ paused: true });
   useGSAP(() => {
     gsap.from(navref.current, {
@@ -86,7 +85,7 @@ const Navbar = () => {
         <X
           className="absolute top-6 right-5"
           onClick={() => {
-            mobilemenetimeline.revert();
+            mobilemenetimeline.reverse();
           }}
         />
         {Navbar_links.map((link, index) => (
