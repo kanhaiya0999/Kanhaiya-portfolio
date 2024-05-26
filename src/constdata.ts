@@ -44,4 +44,9 @@ export const Components_links = [
     description: "Project section",
     link: "/components-page/05",
   },
+  {
+    name: "06",
+    description: "Project section",
+    link: "/components-page/06",
+  },
 ];

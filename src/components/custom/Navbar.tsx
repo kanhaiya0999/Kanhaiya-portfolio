@@ -1,12 +1,14 @@
 "use client";
 import Image from "next/image";
-import Link from "next/link";
-import { useRouter } from "next/navigation";
+
 import { useGSAP } from "@gsap/react";
 import { useRef } from "react";
 import gsap from "gsap";
 import { Navbar_links } from "@/constdata";
 import { Menu, X } from "lucide-react";
+
+import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 const Navbar = () => {
   const router = useRouter();
@@ -50,7 +52,7 @@ const Navbar = () => {
               alt="Logo"
               className="md:h-auto md:w-10 cursor-pointer w-10 h-10"
               onClick={() => {
-                router.push("/");
+                router.replace("/");
               }}
             />
           </div>

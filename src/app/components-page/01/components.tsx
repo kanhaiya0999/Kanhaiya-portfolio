@@ -13,6 +13,19 @@ const Components = () => {
       ease: "expoScale(0.5,7,none)",
       opacity: 0,
     });
+    timeline.fromTo(
+      ".innerbutton",
+      {
+        background: "linear-gradient(90deg, #805AD5 0%, #D65ADB 100%)",
+        duration: 1,
+        ease: "expoScale(0.5,7,none)",
+      },
+      {
+        duration: 1,
+        background: "green",
+        ease: "expoScale(0.5,7,none)",
+      }
+    );
     timeline.to(".complete", { opacity: 1, duration: 1 });
   });
   return (
@@ -20,7 +33,7 @@ const Components = () => {
       onClick={() => {
         timeline.play();
       }}
-      className="relative flex items-center w-80 h-16 rounded-xl bg-gradient-to-r from-purple-500 to-pink-500 text-center justify-center "
+      className="relative innerbutton flex items-center w-80 h-16 rounded-xl bg-gradient-to-r from-purple-500 to-pink-500 text-center justify-center "
     >
       <p className="text-primary font-bold order">ORDER NOW</p>
 
