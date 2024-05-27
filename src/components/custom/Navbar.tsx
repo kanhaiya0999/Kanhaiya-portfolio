@@ -14,13 +14,13 @@ const Navbar = () => {
 
   const mobilemenetimeline = gsap.timeline({ paused: true });
   useGSAP(() => {
-    gsap.from(".navbar", {
-      delay: 0.4,
-      duration: 1,
-      y: 20,
-      ease: "power1",
-      opacity: 0,
-    });
+    // gsap.from(".navbar", {
+    //   delay: 0.4,
+    //   duration: 1,
+    //   y: 20,
+    //   ease: "power1",
+    //   opacity: 0,
+    // });
     mobilemenetimeline.from(".mobilenavbar", {
       duration: 0.5,
       left: "100%",
