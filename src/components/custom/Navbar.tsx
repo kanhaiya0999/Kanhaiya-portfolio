@@ -36,7 +36,7 @@ const Navbar = () => {
   }, []);
 
   return (
-    <nav>
+    <>
       <div className="bg-black text-white md:rounded-b-full overflow-hidden navbar">
         <div className="mx-4 md:max-w-[50%] md:mx-auto md:flex md:justify-between md:p-4 md:text-center md:items-center flex p-5 justify-between text-center items-center">
           <div>
@@ -96,7 +96,7 @@ const Navbar = () => {
           </Link>
         ))}
       </div>
-    </nav>
+    </>
   );
 };
 

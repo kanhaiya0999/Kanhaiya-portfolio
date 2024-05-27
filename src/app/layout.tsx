@@ -16,9 +16,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="bg-gradient-to-r from-yellow-200 to-yellow-400">
-        <div className="sticky top-0">
+        <nav className="sticky top-0">
           <Navbar />
-        </div>
+        </nav>
         {children}
         <div className="fixed  right-0 top-1/2 ">
           <Social />
