@@ -4,7 +4,7 @@ import Image from "next/image";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { Navbar_links } from "@/constdata";
-import { Menu, X } from "lucide-react";
+import { Menu } from "lucide-react";
 
 import Link from "next/link";
 import { useRouter } from "next/navigation";
@@ -14,13 +14,13 @@ const Navbar = () => {
 
   const mobilemenetimeline = gsap.timeline({ paused: true });
   useGSAP(() => {
-    // gsap.from(".navbar", {
-    //   delay: 0.4,
-    //   duration: 1,
-    //   y: 20,
-    //   ease: "power1",
-    //   opacity: 0,
-    // });
+    gsap.from(".navbar", {
+      delay: 0.4,
+      duration: 1,
+      y: 20,
+      ease: "power1",
+      opacity: 0,
+    });
     mobilemenetimeline.from(".mobilenavbar", {
       duration: 0.5,
       left: "100%",
@@ -36,7 +36,7 @@ const Navbar = () => {
   }, []);
 
   return (
-    <>
+    <nav>
       <div className="bg-black text-white md:rounded-b-full overflow-hidden navbar">
         <div className="mx-4 md:max-w-[50%] md:mx-auto md:flex md:justify-between md:p-4 md:text-center md:items-center flex p-5 justify-between text-center items-center">
           <div>
@@ -76,12 +76,6 @@ const Navbar = () => {
         </div>
       </div>
       <div className=" md:hidden mobilenavbar backdrop-blur-md  fixed left-[0%] w-full h-full flex flex-col p-10 z-10">
-        <X
-          className="absolute top-6 right-5"
-          onClick={() => {
-            mobilemenetimeline.reverse();
-          }}
-        />
         {Navbar_links.map((link, index) => (
           <Link
             key={index}
@@ -96,7 +90,7 @@ const Navbar = () => {
           </Link>
         ))}
       </div>
-    </>
+    </nav>
   );
 };
 
